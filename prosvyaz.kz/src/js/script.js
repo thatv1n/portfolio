@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
 
   fetch('../../api/getCarts.php').then((response) => {
     return response.json();
@@ -8,10 +8,12 @@ window.addEventListener('load', function () {
 
       if (localStorage.getItem('login') == 'admin' && localStorage.getItem('prava') == 10) {
         div.innerHTML +=
-          `<div class="gallery-card"> <button class="card-button" id="card-button">X</button> <img id='img-car' src="./src/upload/${item.name_file}" data-id=${item.id} alt="card№${item.id}"> <p class="product">${item.title}</p></div>`;
+          `<div class="gallery-card wow fadeInUp " data-wow-offset="300" data-wow-iteration="1"
+          data-wow-duration="1s"> <button class="card-button" id="card-button">X</button> <img id='img-car' src="./src/upload/${item.name_file}" data-id=${item.id} alt="card№${item.id}"> <p class="product">${item.title}</p></div>`;
       } else {
         div.innerHTML +=
-          `<div class="gallery-card"> <img id='img-car' src="./src/upload/${item.name_file}" data-id=${item.id} alt="card№${item.id}"> <p class="product">${item.title}</p></div>`;
+          `<div class="gallery-card wow fadeInUp " data-wow-offset="300" data-wow-iteration="1"
+          data-wow-duration="1s"> <img id='img-car' src="./src/upload/${item.name_file}" data-id=${item.id} alt="card№${item.id}"> <p class="product">${item.title}</p></div>`;
       }
 
     });
@@ -122,4 +124,24 @@ window.addEventListener('load', function () {
       });
     };
   }
+  let links = document.querySelectorAll('#links');
+
+  slideTo(links[0], document.querySelector('.footer'));
+  slideTo(links[1], document.querySelector('.partners'));
+  slideTo(links[2], document.querySelector('.awards'));
+  slideTo(links[3], document.querySelector('.catalog'));
+  slideTo(links[4], document.querySelector('.about'));
+
+
+
+  function slideTo(a, b) {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      b.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  }
+
 });

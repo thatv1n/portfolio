@@ -78,6 +78,7 @@ nav{
 .header-line{
     display: flex;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .header-line ul{
@@ -93,6 +94,7 @@ nav{
 
 .header-line ul a{
     color: #000;
+    font-size: 1vw;
 }
 
 hr{
@@ -224,6 +226,8 @@ hr{
     right: -10px;
     background-color: #fec70a;
     padding: 5px 30px 5px 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
 }
 
 .about{
@@ -269,6 +273,7 @@ hr{
     color: #fdfdfd;
     font-family: 'Ubuntu', sans-serif;
     font-size: 17px;
+    font-weight: 300;
 }
 
 .awards{
@@ -370,6 +375,10 @@ hr{
 
 .send-us h2{
     text-align: center;
+}
+
+.awards h2{
+    font-size: 36px;
 }
 
 .send-us_headline{

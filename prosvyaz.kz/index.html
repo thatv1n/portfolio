@@ -11,9 +11,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Ubuntu&display=swap"
-        rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Ubuntu&display=swap"
+        rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/libs/animate.css">
     <title>Document</title>
 </head>
 
@@ -35,19 +41,19 @@
                 <img src="/src/img/logo.png" alt="logo">
                 <nav>
                     <ul>
-                        <li>
+                        <li id="links">
                             <a href="#">Контакты</a>
                         </li>
-                        <li>
+                        <li id="links">
                             <a href="#">Партнёры</a>
                         </li>
-                        <li>
+                        <li id="links">
                             <a href="#">Преимущества</a>
                         </li>
-                        <li>
+                        <li id="links">
                             <a href="#">Каталог</a>
                         </li>
-                        <li>
+                        <li id="links">
                             <a href="#">О&nbsp;компании</a>
                         </li>
                     </ul>
@@ -63,13 +69,18 @@
                     <h1>Системы радиосвязи и комплектующие</h1>
                     <p class="first_p">С нами вы всегда на связи</p>
                     <hr>
-                    <p class="second_p">Индивидуальный подбор радиосистем для Вашей компании</p>
-                    <input class="button" type="button" value="Заказать звонок">
+                    <p class="second_p" style="line-height: 24px;">Индивидуальный подбор радиосистем для Вашей компании
+                    </p>
+                    <input class="button wow pulse" type="button" data-wow-iteration="100" data-wow-duration="1s"
+                        value="Заказать звонок">
                 </div>
                 <div class="container-clip">
-                    <div class="clip-img"></div>
-                    <div class="clip-img"></div>
-                    <div class="clip-img"></div>
+                    <div class="clip-img wow fadeInRightBig" data-wow-iteration="1" data-wow-duration="1s">
+                    </div>
+                    <div class="clip-img wow fadeInRightBig" data-wow-iteration="1" data-wow-duration="1.5s">
+                    </div>
+                    <div class="clip-img wow fadeInRightBig" data-wow-iteration="1" data-wow-duration="2s">
+                    </div>
                 </div>
             </div>
 
@@ -98,7 +109,8 @@
         <div class="about">
             <div class="wrapper">
                 <div class="container">
-                    <h2>О компании</h2>
+                    <h2 style="font-size: 36px;">О компании</h2>
+                    <hr>
                     <p class="about-content">С 2012 года, компания “ПРОСВЯЗЬ” зарекомендовала себя, как профессиональный
                         и надежный партнер.<br><br> Основная деятельность компании: выполнение работ по обслуживанию и
                         монтажу систем радиосвязи, слаботочных сетей.<br><br>Наши клиенты: государственные учреждения;
@@ -110,7 +122,7 @@
                 </div>
                 <div class="container container-bf">
                     <div class="omg">
-                        <div class="container-img">
+                        <div class="container-img wow fadeIn" data-wow-offset="300" data-wow-iteration="1">
                             <img src="/src/img/employee.png" alt="employee">
                         </div>
                     </div>
@@ -125,26 +137,30 @@
             <div class="wrapper">
                 <div class="container">
                     <h2>Почему выбирают нас?</h2>
-                    <p class="awards_p">МЫ ОБЕСПЕЧИВАЕМ качественный и профессиональный сервис - ВСЕГДА!</p>
+                    <p class="awards_p" style="font-size:25px; color:#A4A2A3;">МЫ ОБЕСПЕЧИВАЕМ качественный и
+                        профессиональный сервис -
+                        ВСЕГДА!</p>
                     <hr>
                     <div class="advant">
-                        <div class="advantage">
-                            <h3>Сервисное обслуживание</h3>
-                            <p>Своевременная проверка, настройка и ремонт радиостанций.</p>
+                        <div class="advantage wow bounceInLeft" data-wow-offset="300" data-wow-iteration="1">
+                            <h3 style="font-size:24px;font-weight:700;">Сервисное обслуживание</h3>
+                            <p style=" color:#A4A2A3;">Своевременная проверка, настройка и ремонт радиостанций.</p>
                         </div>
-                        <div class="advantage">
-                            <h3>Сервисное обслуживание</h3>
-                            <p>Своевременная проверка, настройка и ремонт радиостанций.</p>
+                        <div class="advantage wow bounceInLeft" data-wow-offset="300" data-wow-delay="0.3s">
+                            <h3 style="font-size:24px;font-weight:700;">Гарантия 1 год</h3>
+                            <p style=" color:#A4A2A3;">Возврат товара при наличии заводского брака.
+                                Гарантийный ремонт.</p>
                         </div>
-                        <div class="advantage">
-                            <h3>Сервисное обслуживание</h3>
-                            <p>Своевременная проверка, настройка и ремонт радиостанций.</p>
+                        <div class="advantage wow bounceInLeft" data-wow-offset="300" data-wow-delay="0.6s">
+                            <h3 style="font-size:24px;font-weight:700;">Доставка</h3>
+                            <p style=" color:#A4A2A3;">Быстрая и удобная доставка
+                                по всему Казахстану.</p>
                         </div>
                     </div>
 
                 </div>
                 <div class="container">
-                    <div class="container-img yellow-img">
+                    <div class="container-img yellow-img wow bounceInRight" data-wow-offset="300">
                         <img src="/src/img/yellow.png" alt="">
                     </div>
 
@@ -162,13 +178,16 @@
                 <div class="gallery">
 
 
-                    <img class="partner-pic" src="/src/img/elina-gallery.png" alt="">
+                    <img class="partner-pic wow bounceInUp" src="/src/img/elina-gallery.png" alt="">
 
-                    <img class="partner-pic" src="/src/img/hytera-gallery.png" alt="">
+                    <img class="partner-pic wow bounceInUp" data-wow-delay="0.3s" src="/src/img/hytera-gallery.png"
+                        alt="">
 
-                    <img class="partner-pic" src="/src/img/motorola-gallery.png" alt="">
+                    <img class="partner-pic wow bounceInUp" data-wow-delay="0.6s" src="/src/img/motorola-gallery.png"
+                        alt="">
 
-                    <img class="partner-pic" src="/src/img/sprecord-gallery.png" alt="">
+                    <img class="partner-pic wow bounceInUp" data-wow-delay="0.9s" src="/src/img/sprecord-gallery.png"
+                        alt="">
 
                 </div>
             </div>
@@ -182,7 +201,7 @@
             <form class="form" action="" method="post" name="sender">
                 <input class="input" type="text" name="sender_name" placeholder="Имя">
                 <input class="input" type="tel" name="sender_phone" id="" placeholder="Телефон">
-                <input class="button" type="button" value="Оставить заявку">
+                <input class="button wow pulse" data-wow-iteration="100" type="button" value="Оставить заявку">
             </form>
         </div>
     </section>
@@ -199,5 +218,9 @@
     </footer>
 </body>
 <script src="./src/js/script.js"></script>
+<script src="./src/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 
 </html>
