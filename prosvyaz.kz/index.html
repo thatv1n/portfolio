@@ -8,60 +8,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Ubuntu&display=swap"
-        rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="./css/libs/animate.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="shortcut icon" href="./src/img/logoIcon.png" type="image/png">
+    <title>Просвязь</title>
 </head>
 
 <body>
     <header>
         <form id="singin_form" class="singin" method="post">
-            <input type="text" name="login">
-            <input type="password" name="password">
+            <h6 style="text-align: center;">Администрирование</h6>
+            <input type="text" name="login" placeholder="Логин">
+            <input type="password" name="password" placeholder="Пароль">
             <input type="submit" value="ВХОД">
             <button id="close_singin" class="close_singin">X</button>
         </form>
-        <div id="singin_div" class="div-for-button">
-            <!-- <button class="singin_button">Войти</button> -->
-            <!-- <button id="exitBtn">Выйти</button> -->
+        <div id="singin_div" class="div-for-button singin_button_box">
         </div>
 
         <div class="header-line">
             <div class="wrapper">
-                <img src="/src/img/logo.png" alt="logo">
-                <nav>
-                    <ul>
-                        <li id="links">
+                <img src="./src/img/logo.png" alt="logo">
+                <nav class="line">
+                    <ul class="nav invis">
+                        <li>
                             <a href="#">Контакты</a>
                         </li>
-                        <li id="links">
+                        <li>
                             <a href="#">Партнёры</a>
                         </li>
-                        <li id="links">
+                        <li>
                             <a href="#">Преимущества</a>
                         </li>
-                        <li id="links">
+                        <li>
                             <a href="#">Каталог</a>
                         </li>
-                        <li id="links">
+                        <li>
                             <a href="#">О&nbsp;компании</a>
                         </li>
                     </ul>
                 </nav>
+                <button class="btn">
+                    <a href="#" class="menu-btn">
+                        <span></span>
+                    </a>
+                </button>
             </div>
 
         </div>
-
+        <script src="script.js"></script>
 
         <div class="header-content">
             <div class="wrapper">
@@ -71,8 +73,8 @@
                     <hr>
                     <p class="second_p" style="line-height: 24px;">Индивидуальный подбор радиосистем для Вашей компании
                     </p>
-                    <input class="button wow pulse" type="button" data-wow-iteration="100" data-wow-duration="1s"
-                        value="Заказать звонок">
+                    <input class="button wow pulse header-button" type="button" data-wow-iteration="100"
+                        data-wow-duration="1s" value="Заказать звонок">
                 </div>
                 <div class="container-clip">
                     <div class="clip-img wow fadeInRightBig" data-wow-iteration="1" data-wow-duration="1s">
@@ -86,20 +88,150 @@
 
         </div>
 
-
-
-
     </header>
+
+    <!-- popup -->
+    <div class="popup_dinamyc">
+        <div class="popup">
+            <button class="popup-close" onclick="closePopup()">x</button>
+    
+            <div class="containergal">
+                <button class="carousel-button" id="left-btn">
+                    < </button>
+                        <div class="carousel-container">
+                            <img id="carousel" src="" alt="">
+                        </div>
+    
+                        <button class="carousel-button" id="right-btn">
+                            >
+    
+                        </button>
+            </div>
+            <div class="popup-info">
+                <p class="popup-product-name">
+    
+                </p>
+                <div class="popup-product-desc-wrap">
+                    <p class="popup-product-desc">
+    
+                    </p>
+                </div>
+                
+                <span class="popup-price"></span>
+                <input class="order-button" type="button" value="Заказать">
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- popup -->
+
+
+    <a class="back_to_top" title="Наверх"></a>
     <section>
         <div class="catalog">
             <div class="wrapp">
-                <h2>Каталог</h2>
-                <hr>
-                <!-- Сменить карточку -->
-                <div id="x"></div>
+                <div class="header-catalog">
+                    <div class="title-catalog">
+                        <h2 id="catalog">Каталог</h2>
+                        <hr class="hrr">
+                    </div>
+                    <div class="tabs">
+                        <div class="tall">
+                            <div class="rubrika">
 
-                <div class="gallery">
+                                <div class="name-rubrika name-rubrika_hidden" data-id="1">Портативные радиостанции</div>
+                                <div class="name-rubrika name-rubrika_hidden" data-id="9">Автомобильные радиостанции
+                                </div>
+                                Pадиостанции
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="name-rubrika rubrika-marg" data-id="2">Антенны</div>
+                        <div class="name-rubrika" data-id="3">Аккумуляторы</div>
+                        <div class="name-rubrika" data-id="4">Гарнитура</div>
+                        <div class="name-rubrika" data-id="5">Зарядные устр-ва</div>
+                        <div class="name-rubrika" data-id="6">Ретрансляторы</div>
+                        <div class="name-rubrika" data-id="7">Кабель</div>
+                        <div class="name-rubrika" data-id="8">Усилитель GSM</div>
+                    </div>
                 </div>
+                <!-- Сменить карточку -->
+                <div id="x">
+
+                </div>
+                <div class="catalog-all">
+                    <div class="gallery show">
+
+                        <div class="gallery-card_twain wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+
+                            <div class="gallery-card_little img-car" data-id="1" data-wow-offset="100"
+                                data-wow-iteration="1" data-wow-duration="1s">
+                                Портативные радиостанции
+                                <!-- <img id="img-car" class="img-car" data-id="1" src="/" alt="card№1"> -->
+                                <!-- <p class="product">Радиостанции 1</p> -->
+                            </div>
+                            <div class="gallery-card_little img-car" data-id="9" data-wow-offset="100"
+                                data-wow-iteration="1" data-wow-duration="1s">
+                                Автомобильные радиостанции
+                                <!-- <img id="img-car" class="img-car" data-id="9" src="/" alt="card№9"> -->
+                                <!-- <p class="product">Радиостанции 2</p> -->
+                            </div>
+                            <img id="img-car" class="img-car blur" data-id="2" src="./src/img/01.png" alt="card№2">
+                            <p class="product blur">Радиостанции</p>
+                        </div>
+
+
+
+
+
+                        <div class="gallery-card wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+                            <img id="img-car" class="img-car" data-id="2" src="./src/img/02.png" alt="card№2">
+                            <p class="product">Антенны</p>
+                        </div>
+                        <div class="gallery-card wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+                            <img id="img-car" class="img-car" data-id="3" src="./src/img/03.png" alt="card№3">
+                            <p class="product">Аккумуляторы</p>
+                        </div>
+                        <div class="gallery-card wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+                            <img id="img-car" class="img-car" data-id="4" src="./src/img/04.png" alt="card№4">
+                            <p class="product">Гарнитура</p>
+                        </div>
+                        <div class="gallery-card wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+                            <img id="img-car" class="img-car" data-id="5" src="./src/img/05.png" alt="card№5">
+                            <p class="product">Зарядные устройства</p>
+                        </div>
+                        <div class="gallery-card wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+                            <img id="img-car" class="img-car" data-id="6"
+                                src="./src/img/b99a5355c7935caa857bf6d42c868784.jpg" alt="card№6">
+                            <p class="product">Ретрансляторы</p>
+                        </div>
+                        <div class="gallery-card wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+                            <img id="img-car" class="img-car" data-id="7" src="./src/img/07.png" alt="card№7">
+                            <p class="product">Кабель коаксиальный</p>
+                        </div>
+                        <div class="gallery-card wow fadeInUp gallery-card_height" data-wow-offset="100"
+                            data-wow-iteration="1" data-wow-duration="1s">
+                            <img id="img-car" class="img-car" data-id="8" src="./src/img/08.png" alt="card№8">
+                            <p class="product">Усилитель GSM</p>
+                        </div>
+                    </div>
+                    <div class="items hide">
+
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -109,7 +241,7 @@
         <div class="about">
             <div class="wrapper">
                 <div class="container">
-                    <h2 style="font-size: 36px;">О компании</h2>
+                    <h2 id="about" style="font-size: 36px;">О компании</h2>
                     <hr>
                     <p class="about-content">С 2012 года, компания “ПРОСВЯЗЬ” зарекомендовала себя, как профессиональный
                         и надежный партнер.<br><br> Основная деятельность компании: выполнение работ по обслуживанию и
@@ -122,8 +254,8 @@
                 </div>
                 <div class="container container-bf">
                     <div class="omg">
-                        <div class="container-img wow fadeIn" data-wow-offset="300" data-wow-iteration="1">
-                            <img src="/src/img/employee.png" alt="employee">
+                        <div class="container-img wow fadeIn" data-wow-offset="100" data-wow-iteration="1">
+                            <img src="./src/img/employee.png" alt="employee">
                         </div>
                     </div>
 
@@ -136,22 +268,22 @@
         <div class="awards">
             <div class="wrapper">
                 <div class="container">
-                    <h2>Почему выбирают нас?</h2>
+                    <h2 id="awards">Почему выбирают нас?</h2>
                     <p class="awards_p" style="font-size:25px; color:#A4A2A3;">МЫ ОБЕСПЕЧИВАЕМ качественный и
                         профессиональный сервис -
                         ВСЕГДА!</p>
                     <hr>
                     <div class="advant">
-                        <div class="advantage wow bounceInLeft" data-wow-offset="300" data-wow-iteration="1">
+                        <div class="advantage wow bounceInLeft" data-wow-offset="100" data-wow-iteration="1">
                             <h3 style="font-size:24px;font-weight:700;">Сервисное обслуживание</h3>
                             <p style=" color:#A4A2A3;">Своевременная проверка, настройка и ремонт радиостанций.</p>
                         </div>
-                        <div class="advantage wow bounceInLeft" data-wow-offset="300" data-wow-delay="0.3s">
+                        <div class="advantage wow bounceInLeft" data-wow-offset="100">
                             <h3 style="font-size:24px;font-weight:700;">Гарантия 1 год</h3>
                             <p style=" color:#A4A2A3;">Возврат товара при наличии заводского брака.
                                 Гарантийный ремонт.</p>
                         </div>
-                        <div class="advantage wow bounceInLeft" data-wow-offset="300" data-wow-delay="0.6s">
+                        <div class="advantage wow bounceInLeft" data-wow-offset="100">
                             <h3 style="font-size:24px;font-weight:700;">Доставка</h3>
                             <p style=" color:#A4A2A3;">Быстрая и удобная доставка
                                 по всему Казахстану.</p>
@@ -160,8 +292,8 @@
 
                 </div>
                 <div class="container">
-                    <div class="container-img yellow-img wow bounceInRight" data-wow-offset="300">
-                        <img src="/src/img/yellow.png" alt="">
+                    <div class="container-img yellow-img wow bounceInRight" data-wow-offset="100">
+                        <img src="./src/img/yellow.png" alt="">
                     </div>
 
                 </div>
@@ -178,15 +310,15 @@
                 <div class="gallery">
 
 
-                    <img class="partner-pic wow bounceInUp" src="/src/img/elina-gallery.png" alt="">
+                    <img class="partner-pic wow fadeInUp" src="./src/img/elina-gallery.png" alt="">
 
-                    <img class="partner-pic wow bounceInUp" data-wow-delay="0.3s" src="/src/img/hytera-gallery.png"
+                    <img class="partner-pic wow fadeInUp" data-wow-delay="0.3s" src="./src/img/hytera-gallery.png"
                         alt="">
 
-                    <img class="partner-pic wow bounceInUp" data-wow-delay="0.6s" src="/src/img/motorola-gallery.png"
+                    <img class="partner-pic wow fadeInUp" data-wow-delay="0.6s" src="./src/img/motorola-gallery.png"
                         alt="">
 
-                    <img class="partner-pic wow bounceInUp" data-wow-delay="0.9s" src="/src/img/sprecord-gallery.png"
+                    <img class="partner-pic wow fadeInUp" data-wow-delay="0.9s" src="./src/img/sprecord-gallery.png"
                         alt="">
 
                 </div>
@@ -196,13 +328,17 @@
     </section>
     <section>
         <div class="send-us">
-            <h2>Оставьте заявку</h2>
-            <p class="send-us_headline">С Вами свяжется Ваш специалист и поможет подобрать оборудование</p>
-            <form class="form" action="" method="post" name="sender">
-                <input class="input" type="text" name="sender_name" placeholder="Имя">
-                <input class="input" type="tel" name="sender_phone" id="" placeholder="Телефон">
-                <input class="button wow pulse" data-wow-iteration="100" type="button" value="Оставить заявку">
+            <h2 id="send-us">Оставьте заявку</h2>
+            <p class="send-us_headline">С Вами свяжется наш специалист и поможет подобрать оборудование</p>
+            <form class="form" action="" method="post" name="sender" id="send_form">
+                <input class="input" type="text" name="sender_name" required placeholder="Имя">
+                <input class="input" type="tel" name="sender_phone" id="" required placeholder="Телефон">
+                <input class="button wow pulse" data-wow-iteration="100" type="submit" value="Оставить заявку">
             </form>
+            <center>
+                <div id="loader">
+                </div>
+            </center>
         </div>
     </section>
     <footer class="footer">
@@ -212,15 +348,16 @@
         <p>Телефоны: 8 (7182) 65-33-80 / 8 (7182) 65-38-98 / 8 (702) 329-94-59 / 8 (776) 112-92-53 / 8 (771) 560-52-71
         </p>
         <div class="socialmedia">
-            <a href="#"></a>
-            <a href="#"></a>
+            <a href="https://wa.me/77715605271"></a>
+            <a href="https://www.instagram.com/racii_prosvyaz_pvl/"></a>
         </div>
     </footer>
 </body>
-<script src="./src/js/script.js"></script>
+
 <script src="./src/js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
+<script src="./src/js/imask.js"></script>
+<script src="popup.js"></script>
+<script src="./src/js/script.js"></script>
+
 
 </html>

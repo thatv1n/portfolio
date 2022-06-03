@@ -1,0 +1,93 @@
+body{
+  background-color: #F9F9FD;
+
+}
+.root{
+  position: relative;
+  height: 100vh;
+
+  &__modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  width: 500px;
+  padding-bottom: 65px;
+  border-radius: 10px;
+
+
+  &_title{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #DC4C3F;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #fff;
+    
+  }
+  &_body{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    div{
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      width: 100%;
+      position: relative;
+    }
+
+    label{
+      margin-left: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    &_textChecked{
+      text-decoration: line-through
+      ;
+    }
+  }
+  &_svg{
+    width: 30px;
+    right: 20px;
+    position: fixed;
+    opacity: 0.2;
+    cursor: pointer;
+  }
+  &_svg:hover{
+    opacity: 10;
+  }
+  &_footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    svg{
+      cursor: pointer;  
+      padding: 10px;
+    }
+  }
+  }
+  @media screen and (max-width: 509px){
+    &__modal{
+    width: 93%;
+    padding-bottom: 65px;
+    height: auto;
+    }
+  }
+
+  
+}

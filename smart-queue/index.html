@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css"
+    integrity="sha512-gCJkkUMGTe73+FMwog6gIBCVJIMXRoc21l6/IPCuzxCex/1sxvO8ctb6Zd4/WWs2UMqmtnDrAdhJht5pEY0LXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Smart-очередь</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header__content">
+      <p>Ипотека по программе 7-20-25 </p>
+      <a href="./about-programm.pdf" target="_blank">О программе</a>
+    </div>
+  </header>
+
+  <div class="inner__content">
+    <div class="title">
+      <div class="title_text">ЖК "Сарыарка", жилой дом №39</div>
+      <div class="sub_title" id="sub_title">Доступно квартир: </div>
+
+      <!-- Фильтрация квартир -->
+      <div class="block_filters">
+        <div class="block_buttons">
+          <button class="button_filters " data-countRoom="1">1-комнатная</button>
+          <button class="button_filters" data-countRoom="2">2-комнатная</button>
+          <button class="button_filters" data-countRoom="3">3-комнатная</button>
+        </div>
+        <div class="floors">
+          <label for="">Этаж:</label>
+          <select name="" class="floors__select" id="befFloor" style="margin-right: 20px;">
+            <option value="">От</option>
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+          <select name="" class="floors__select" id="aftFloor">
+            <option value="">До</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9" selected>9</option>
+          </select>
+        </div>
+        <button class="btn_filters" id="btn_filters">Применить</button>
+        <button class="btn_filters btn_reserv" id="btn_reserv">Резерв</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="main_content" id="main_content">
+      <div class="classLoader" id="loader">
+        <div class="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="apply hidden">
+      <div class="popup_button">
+        <button id="openWindowApply">Подать заявку</button>
+      </div>
+      <div class="popup_apply">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="popup_window_apply hidden">
+
+    <!-- попап заявки на бронирование -->
+    <div class="popup" id="popup">
+      <div class="popup_apply_close" id="popup_apply_close"><img src="./img/close.png" alt="close"></div>
+      <div class="popup_title">На квартиру в ЖК "Сарыарка",
+        дом № 39</div>
+      <p class="popup_subTitle" id="room">кол-во комнат: 1</p>
+      <p class="popup_subTitle" id="square">площадь (м2): 40 - 46,4</p>
+      <p class="popup_subTitle" id="floor">этаж: 1</p>
+      <div style="width: 100%;">
+        <p class="title_from">Данные заявителя:</p>
+        <form id="form">
+          <label for="surname">
+            Фамилия
+          </label>
+          <input type="text" name="" id="surname">
+          <label for="name">
+            Имя
+          </label>
+          <input type="text" name="" id="name">
+          <label for="patronymic">
+            Отчество
+          </label>
+          <input type="text" name="" id="patronymic">
+
+          <label for="iin">
+            ИИН
+          </label>
+          <input type="text" name="iin" id="iin">
+          <label for="iin">
+            Номер телефона
+          </label>
+          <input type="text" name="" id="phone">
+
+          <div class="chekbox-agree">
+            <input type="checkbox" id="data_processing" style="width:24.07px; margin: 0;">
+            <label for="data_processing"
+              style=" font-weight: 300;  font-size: 12px;   line-height: 12px; margin-left: 9.03px;">Я даю
+              согласие на сбор и обработку данных</label>
+          </div>
+
+          <div class="chekbox-agree">
+            <input type="checkbox" id="citizenRK" style="width:24.07px; margin: 0;">
+            <label for="citizenRK"
+              style=" font-weight: 300;  font-size: 12px; line-height: 12px; margin-left: 9.03px;width: 258px;">Я
+              гражданин РК, у
+              меня нет на праве
+              собственности жилья на территории РК</label>
+          </div>
+
+          <div class="form_button">
+            <button id="sendAplycation">Отправить</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- попап подтверждения брони из смс -->
+    <div class="popup_phone hidden" id="popup_phone">
+      <div class="popup_apply_close" id="popup_apply_phone_close"><img src="./img/close.png" alt="close"></div>
+      <div class="popup_title">Введите код из смс</div>
+      <div class="form_button">
+        <form id="form_confirm" class="form_confirm">
+          <input type="number" name="sms" id="code">
+          <button id="popup_apply_confirm_btn" style="margin:0 auto;">Подтвердить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- попап если кв успешно забронирована -->
+    <div class="popup_done hidden ">
+      <div class="popup_apply_close" id="popup_apply_close_done"><img src="./img//close.png" alt="close"></div>
+      <div class="popup_title" id="popup_title_done">На квартиру в ЖК "Сарыарка",
+        дом № 39</div>
+      <div class="form_button">
+        <button id="popup_apply_close_done_btn">ОК</button>
+      </div>
+    </div>
+
+    <!-- попап если кв уже забронирована -->
+    <div class="popup_error hidden " id="popup_error">
+      <div class="popup_apply_close" id="popup_apply_close_error"><img src="./img/close.png" alt="close"></div>
+      <div class="popup_title" id="popup_title_err" style="color: red;">Квартира №'1' забронирована другим пользователем
+      </div>
+      <div class="form_button">
+        <button id="popup_apply_close_error_btn">Закрыть</button>
+      </div>
+    </div>
+
+    <!-- Попап выбора комнат для резерва -->
+    <div class="popup_reserv hidden " id="popup_reserv">
+      <div class="popup_apply_close" id="popup_reserve_close"><img src="./img/close.png" alt="close"></div>
+      <div class="popup_title">Встать в резерв на квартиру:</div>
+      <div class="block_buttons_reserv">
+        <button class="button_filters_res " data-countRoom="1">1-комнатная</button>
+        <button class="button_filters_res " data-countRoom="2">2-комнатная</button>
+        <button class="button_filters_res " data-countRoom="3">3-комнатная</button>
+      </div>
+      <div class="form_button">
+        <button class="reserv_next" id="reserv_next" style="margin-left: 0;">Далее</button>
+      </div>
+    </div>
+
+    <!-- Заявка на резерв -->
+    <div class="popup hidden" id="popup_reserv_app">
+      <div class="popup_apply_close" id="popup_apply_close_reserv_app"><img src="./img/close.png" alt="close"></div>
+      <div class="popup_title"><b>Заявка на резерв</b></div>
+      <div class="popup_title" id="popup_title_reserv_app"></div>
+      <div style="width: 100%;">
+        <p class="title_from">Данные заявителя:</p>
+        <form id="form_reserv">
+          <label for="surname">
+            Фамилия
+          </label>
+          <input type="text" name="" id="surnameR">
+          <label for="name">
+            Имя
+          </label>
+          <input type="text" name="" id="nameR">
+          <label for="patronymic">
+            Отчество
+          </label>
+          <input type="text" name="" id="patronymicR">
+
+          <label for="iin">
+            ИИН
+          </label>
+          <input type="text" name="iin" id="iinR">
+          <label for="iin">
+            Номер телефона
+          </label>
+          <input type="text" name="" id="phoneR">
+
+          <div class="chekbox-agree">
+            <input type="checkbox" id="data_processing_res" style="width:24.07px; margin: 0;">
+            <label for="data_processing_res"
+              style=" font-weight: 300;  font-size: 12px;   line-height: 12px; margin-left: 9.03px;">Я даю
+              согласие на сбор и обработку данных</label>
+          </div>
+
+          <div class="chekbox-agree">
+            <input type="checkbox" id="citizenRK_res" style="width:24.07px; margin: 0;">
+            <label for="citizenRK_res"
+              style=" font-weight: 300;  font-size: 12px; line-height: 12px; margin-left: 9.03px;width: 258px;">Я
+              гражданин РК, у
+              меня нет на праве
+              собственности жилья на территории РК</label>
+          </div>
+
+          <div class="form_button">
+            <button id="sendAplycation_reserv">Отправить</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>ГУ "Отдел жилищных отношений города Павлодара"</p>
+      <p>тел. 32 74 48</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/inputMask.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>
